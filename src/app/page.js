@@ -1,49 +1,78 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import {
+  FaDownload,
+  FaFacebook,
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+} from 'react-icons/fa'
 
 export default function Home() {
   return (
-    <div>
-      <header className='flex justify-between items-center px-20 my-3'>
-        <div className='flex items-center space-x-4'>
-          <div className='w-10 h-10 overflow-hidden rounded-full'>
-            <Image
-              alt='avatar'
-              src={'/avatar.jpg'}
-              className='w-full h-full object-cover '
-              height={100}
-              width={100}
-            />
-          </div>
-          <div>
-            <p className='text-sm font-semibold'>Duy Nguyen Duc Thanh</p>
-            <p className='text-[12px] text-gray-600'>Fullstack Web Developer</p>
-          </div>
+    // bg-[#E2FDEB]
+    <div className='pt-20  flex flex-col w-full h-screen items-center gap-7'>
+      <div className='rounded-full overflow-hidden w-40 h-40 border-white border-2'>
+        <Image
+          src={'/avatar.jpg'}
+          width={160}
+          height={160}
+          alt='avater'
+          className='object-cover w-full h-full'
+        />
+      </div>
+      <div className='flex flex-col gap-2 items-center'>
+        <p className='text-3xl font-bold'>Duy Nguyen Duc Thanh</p>
+        <p className='text-lg italic text-green-500'>Fullstack Web Developer</p>
+      </div>
+      <p className='w-[50%] text-gray-600'>
+        I am a <b>Software Engineer</b> graduated from the{' '}
+        <b>University of Information Technology, VNU-HCM</b>. I have experience
+        in{' '}
+        <b>
+          JavaScript, Java, Node.js (Express), Spring Boot, Next.js,
+          React.js{' '}
+        </b>
+        and databases such as <b>MongoDB, MySQL, and Redis</b>. I also work with{' '}
+        <b>Docker, AWS, and Kafka </b>to build scalable and efficient
+        applications.
+      </p>
+
+      <div className='flex gap-7 items-center'>
+        <a
+          href='/CV_Nguyen_Duc_Thanh_Duy.pdf'
+          className='flex items-center space-x-2 px-4 py-2 border-white border-2 bg-green-500 text-white rounded-sm'
+        >
+          <FaDownload size={20} />
+          <span>Download CV</span>
+        </a>
+
+        <div className='w-fit h-fit flex gap-2'>
+          <a
+            href='mailto:ndt.duy.dev@gmail.com'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='p-2 bg-red-500 text-white rounded-full h-fit hover:bg-red-600'
+          >
+            <FaEnvelope size={20} />
+          </a>
+          <a
+            href='https://www.linkedin.com/in/ndtduy/'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='p-2 bg-blue-500 text-white rounded-full h-fit hover:bg-blue-600'
+          >
+            <FaLinkedin size={20} />
+          </a>
+          <a
+            href='https://github.com/DuyDangCode'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='p-2 bg-gray-800 text-white rounded-full hover:bg-gray-900 w-fit'
+          >
+            <FaGithub size={20} />
+          </a>
         </div>
-        <div>
-          <nav className='space-x-4 text-gray-600'>
-            <Link href={'#intro-section'}>About</Link>
-            <Link href={'#skills-section'}>Skills</Link>
-            <Link href={'#projects-section'}>Projects</Link>
-            <Link href={'#experience-section'}>Experience</Link>
-          </nav>
-        </div>
-      </header>
-      <hr className='border-t w-full border-gray-300' />
-      <main>
-        {/* intro section */}
-        <section id='intro-section'>About</section>
-
-        {/* skill section */}
-        <section id='skills-section'>Skill</section>
-
-        {/* projects section */}
-        <section id='projects-section'></section>
-
-        {/* work experience */}
-        <section id='experience-section'></section>
-      </main>
-      <footer></footer>
+      </div>
     </div>
   )
 }
