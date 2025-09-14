@@ -1,3 +1,3 @@
 export default function Projects() {
-  return <div>projects</div>
+  return <div className='flex flex-col'></div>
 }
