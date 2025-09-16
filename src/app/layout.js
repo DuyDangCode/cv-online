@@ -1,9 +1,7 @@
 import './globals.css'
 import Image from 'next/image'
-import Link from 'next/link'
 import { Inter } from 'next/font/google'
-import { FaBars } from 'react-icons/fa'
-import MobileNav from './mobileNav'
+import HeaderNav from '@/components/headerNav'
 
 export const metadata = {
   title: 'Duy Nguyen Duc Thanh',
@@ -38,7 +36,7 @@ export default function RootLayout({ children }) {
                 </p>
               </div>
             </div>
-            <MobileNav />
+            <HeaderNav />
           </div>
           <hr className='border-t w-full border-gray-300' />
         </header>
