@@ -5,7 +5,7 @@ const PROJECTS = [
     description: `Backend project for an online shop selling electronic products. This was a solo, self-study project.
 Key functionalities include: CRUD for products, inventory, user management, shopping cart, vouchers, and orders, as well as managing high concurrent purchase loads.
 `,
-    github: 'https://github.com/DuyDangCode/EShop_BE_NodeJS',
+    github: ['https://github.com/DuyDangCode/EShop_BE_NodeJS'],
     tags: ['Node.js', 'Express', 'MongoDB', 'Redis', 'AWS EC2', 'Cloudinary'],
   },
   {
