@@ -2,11 +2,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FaArrowRight } from 'react-icons/fa'
 
-export default function ProjectCard({ image, title, description, tags }) {
+export default function ProjectCard({ image, title, description, tags, id }) {
   return (
     <div className='bg-white overflow-hidden rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-lg transition h-full  md:max-h-[80%]'>
       {/* Image */}
-      <Link href={`/projects/`}>
+      <Link href={`/projects/${id}`}>
         <div className='w-full h-48 flex items-center justify-center overflow-hidden rounded-lg bg-gray-50'>
           <Image
             src={image == null || image.length === 0 ? '/project.jpg' : image}
