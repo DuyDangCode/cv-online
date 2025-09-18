@@ -5,7 +5,6 @@ import { FaBuilding, FaCalendarAlt, FaCheckCircle } from 'react-icons/fa'
 
 export default async function ExperiencePage({ params }) {
   const { id } = await params
-  console.log(id)
   const experience = EXPERIENCES[id]
   if (!experience) return notFound()
 
